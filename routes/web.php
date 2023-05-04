@@ -32,4 +32,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('/register', [UserController::class, 'processRegistration'])->name('register');
+
+Route::get('/mi-nueva-ruta', function () {
+    return 'Hola, esta es mi nueva ruta!';
+});
+
+Route::get('register', [RegisteredUserController::class, 'create'])
+->name('register');
+
+Route::post('register', [RegisteredUserController::class, 'store']);
+
+Route::post('/emails', [EmailController::class, 'store'])->name('emails.store');
+
+
 require __DIR__.'/auth.php';

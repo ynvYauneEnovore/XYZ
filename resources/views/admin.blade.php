@@ -7,85 +7,48 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                <form method="POST" action="{{ route('register') }}">
+            <div class="bg-dark bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-dark">
+                <form id="user-form">
                     @csrf
-
-                     <!-- Nombre -->
-                     <div>
-                        <x-input-label for="name" :value="__('Nombre')" />
-                        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password" minlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_confirmation">Verificación de Contraseña:</label>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" maxlength="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Número Celular:</label>
+                        <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <label for="cedula">Cédula:</label>
+                        <input type="text" class="form-control" id="cedula" name="cedula" maxlength="11" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="codigo_ciudad">Código de Ciudad:</label>
+                        <input type="number" class="form-control" id="codigo_ciudad" name="codigo_ciudad" required>
                     </div>
 
-                    <!-- Email Address -->
-                    <div class="mt-4">
-                        <x-input-label for="email" :value="__('Email')" />
-                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                    </div>
-
-                    <!-- Password -->
-                    <div class="mt-4">
-                        <x-input-label for="password" :value="__('Contraceña')" />
-
-                        <x-text-input id="password" class="block mt-1 w-full"
-                                        type="password"
-                                        name="password"
-                                        required autocomplete="new-password" />
-
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    </div>
-
-                    <!-- Confirm Password -->
-                    <div class="mt-4">
-                        <x-input-label for="password_confirmation" :value="__('Confirmar Contraceña')" />
-
-                        <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                        type="password"
-                                        name="password_confirmation" required autocomplete="new-password" />
-
-                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                    </div>
-
-                    <!-- Número de celular -->
-                    <div>
-                        <x-input-label for="name" :value="__('Número de celular')" />
-                        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <!-- cédula -->
-                    <div>
-                        <x-input-label for="name" :value="__('Cédula')" />
-                        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <!-- Fecha de Nacimiento -->
-                    <div>
-                        <x-input-label for="name" :value="__('Fecha de Nacimiento')" />
-                        <x-text-input id="name" class="block mt-1 w-full" type="date" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <!-- Código de Ciudad -->
-                    <div>
-                        <x-input-label for="name" :value="__('Código de Ciudad')" />
-                        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <div class="flex items-center justify-end mt-4">
-
-                        <x-primary-button class="ml-4">
-                            {{ __('Registrar') }}
-                        </x-primary-button>
-                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
                 </div>
             </div>
         </div>
     </div>
 </x-app-layout>
+

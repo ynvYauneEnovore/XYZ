@@ -24,6 +24,9 @@ class AdminSeeder extends Seeder
         $admin->email = 'admin@xyz.bo';
         $admin->password = Hash::make('12527614'); // cambia "contraseña" por la contraseña que desees
         $admin->role = 'admin';
+        $admin->fecha_nacimiento = '1997-12-04';
+        $admin->cedula = '12527614';
+        $admin->codigo_ciudad = '56';
         $admin->save();
     }
 }

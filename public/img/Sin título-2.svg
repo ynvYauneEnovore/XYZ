@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.8 157.02">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00405f;
+        font-family: SFProDisplay-Regular, 'SF Pro Display';
+        font-size: 123px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.05em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 104.83)"><tspan x="0" y="0">XYZ S.A</tspan><tspan class="cls-2" x="436.32" y="0">.</tspan></text>
+</svg>
