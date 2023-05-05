@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-dark bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-dark">
-                <form id="user-form">
+                <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="form-group">
                         <label for="email">Email:</label>
