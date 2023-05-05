@@ -36,10 +36,10 @@
                             <a class="nav-link text-white bg-primary" href=" {{ url('/') }} ">Inicio</a>
                         </li>
                     <li class="nav-item">
-                        <button onclick="location.href = '{{ route('register') }}'" type="button" class="btn btn-link" disabled>Nosotros</button>
+                        <button onclick="location.href = '{{ route('login') }}'" type="button" class="btn btn-link" disabled>Nosotros</button>
                     </li>
                     <li class="nav-item">
-                        <button onclick="location.href = '{{ route('register') }}'" type="button" class="btn btn-link" disabled>Servicios</button>
+                        <button onclick="location.href = '{{ route('login') }}'" type="button" class="btn btn-link" disabled>Servicios</button>
                     </li>
                     <li class="nav-item">
                         <button onclick="location.href = '{{ route('login') }}'" type="button" class="btn btn-success" >Acceder</button>

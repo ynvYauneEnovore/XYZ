@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\AdminController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin');
-})->middleware(['auth', 'verified'])->name('admin');
+Route::get('/administrador',  [UserController::class, 'index'], function () {
+    return view('administrador');
+})->middleware(['auth', 'verified'])->name('administrador');
+
 
 Route::get('/user', function () {
     return view('user');
