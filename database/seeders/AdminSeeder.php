@@ -22,10 +22,10 @@ class AdminSeeder extends Seeder
         $admin = new User();
         $admin->name = 'Yovan Ramon Yaune Enovore';
         $admin->email = 'admin@xyz.bo';
-        $admin->password = Hash::make('12527614'); // cambia "contraseña" por la contraseña que desees
-        $admin->role = 'admin';
-        $admin->fecha_nacimiento = '1997-12-04';
-        $admin->cedula = '12527614';
+        $admin->password = Hash::make('321654987Eno@'); // cambia "contraseña" por la contraseña que desees
+        $admin->role = 'Administrador';
+        $admin->fecha_nacimiento = '1999-12-04';
+        $admin->cedula = '65983214';
         $admin->codigo_ciudad = '56';
         $admin->save();
     }
