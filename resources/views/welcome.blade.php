@@ -18,7 +18,7 @@
     <!-- Navbar  -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 bg-dark" style="background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
         <div class="container">
-            <img src="{{ url('img/logo.png') }}" alt="YNv@XYZ" width="150" height="60">
+            <img src="{{ url('img/logo.png') }}" alt="YNv@XYZ" width="60" height="80">
             <button
                 class="navbar-toggler"
                 type="button"
@@ -54,9 +54,9 @@
     <div class="banner-image w-80 vh-100 d-flex justify-content-center align-items-center">
         <div class="container text-center">
             <div class="row">
-                <div class="col">
+                <div class="col-sm-12 col-md-6">
                     <a class="nav-link text-white" href=" {{ url('login') }} ">
-                        <img src="{{url('img/admin.png')}}" alt="Bootstrap" width="200" height="200">
+                        <img src="{{url('img/admin.png')}}" alt="admin-dev" width="200" height="200">
                     </a>
                     <div class="text-with">
                         <a class="nav-link text-white" href=" {{ url('login') }} ">
@@ -65,9 +65,9 @@
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col-sm-12 col-md-6">
                     <a class="nav-link text-white" href=" {{ url('login') }} ">
-                        <img src="{{url('img/users.png')}}" alt="Bootstrap" width="230" height="200">
+                        <img src="{{url('img/users.png')}}" alt="user-cliente" width="190" height="200">
                     </a>
                     <div class="text-white">
                         <a class="nav-link text-white" href=" {{ url('login') }} ">
@@ -84,7 +84,9 @@
     <!-- Copyright -->
     <footer class="text-center text-white">
         <div class="text-center p-3"  style="background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);">
-            XYZ s.a. © 2023 Todos los derechos reservados.
+            XYZ S.A. © 2023 Todos los derechos reservados.
+            <hr>
+            dev: Yovan Ramón Yaune Enovore
         </div>
     </footer>
     <!-- Copyright -->
